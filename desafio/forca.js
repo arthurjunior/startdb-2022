@@ -1,11 +1,22 @@
 
-// variaveis do jogo
-var palavra = ""
-var exit = false
-var erro = 0
-var array = [];
-var letras = /^([a-z]+)$/;
-var wrong = []
+
+//database text
+const bancoDePalavras = [
+  "casa",
+  "carro",
+  "desafio",
+  "honra",
+  "espelho",
+  "pijama",
+  "covil",
+  "elefante",
+  "guitarra",
+];
+
+const letrasChutadas = [];
+let palavraSorteada;
+let tentativa = 0;
+let teclado = 0; //
 
 
 class Forca {
@@ -22,5 +33,6 @@ class Forca {
       }
   }
 }
+
 
 module.exports = Forca;
