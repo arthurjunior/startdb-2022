@@ -1,4 +1,13 @@
 
+// variaveis do jogo
+var palavra = ""
+var exit = false
+var erro = 0
+var array = [];
+var letras = /^([a-z]+)$/;
+var wrong = []
+
+
 class Forca {
 
   chutar(letra) { }
