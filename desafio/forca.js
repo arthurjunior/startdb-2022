@@ -1,3 +1,4 @@
+vida = 6
 class Forca {
 
   chutar(letra) { }
