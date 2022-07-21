@@ -1,25 +1,9 @@
-
-
-//database text
-const bancoDePalavras = [
-  "casa",
-  "carro",
-  "desafio",
-  "honra",
-  "espelho",
-  "pijama",
-  "covil",
-  "elefante",
-  "guitarra",
-];
-
-const letrasChutadas = [];
-let palavraSorteada;
-let tentativa = 0;
-let teclado = 0; //
-
-
 class Forca {
+
+  // PASSANDO PELO SPLIT E SEPARANDO AS LETRAS  
+  constructor(Forca){
+    this.caracters = Forca.split("");
+   }
 
   chutar(letra) { }
 
