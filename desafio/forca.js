@@ -1,11 +1,14 @@
 class Forca {
 
-  // PASSANDO PELO SPLIT E SEPARANDO AS LETRAS  
+  //passando a palavra por um SPLIT para separar as letras 
   constructor(Forca){
     this.caracters = Forca.split("");
    }
 
-  chutar(letra) { }
+  chutar(letra) { 
+    //passando a palavra por um MAP para poder trocar a letra por um Underline "_"
+    this.boxes = this.caracters.map(char => {return "_"});
+  }
 
   buscarEstado() { return ""; } // Possiveis valores: "perdeu", "aguardando chute" ou "ganhou"
 
