@@ -23,3 +23,4 @@ class Forca {
 
 
 module.exports = Forca;
+
