@@ -6,6 +6,8 @@
 
 É um jogo que antigamente necessitava de duas pessoas, uma para selecionar a palavra secreta e outra para tentar acertar. A pessoa que escolhia a palavra desenhava/registrava tudo no papel, desde o desenho da forca, as letras acertadas e letras erradas. Algo muito próximo do gif acima.
 
+o Projeto ainda nao tem interface grafica!
+
 ## Instalando o Node e rodando localmente
 
 1. Instalar o [Node](https://nodejs.org/en/)
