@@ -6,7 +6,7 @@ class Forca {
   constructor(Forca){ //criando objeto
     this.characters = Forca.split(""); //Criei um array para passar a palavra por um SPLIT para separar as letras  em caracteres
     this.boxes = this.characters.map(letra => {return "_"});  //array para passar a palavra por um MAP para poder trocar a letra por um Underline "_"
-    this.corrects = 0; //  acertos 
+    this.corrects = 0; //  contador de acertos
    }
   
   chutar(letra) { 
@@ -19,7 +19,7 @@ class Forca {
     for(let i = 0; i < this.boxes.length; i++){
       if(letra == this.characters[i]){
         if(letra !== this.boxes[i]){
-          this.corrects++    // contador de acertos
+          this.corrects++    // contador de acertos de acordo com o tamanho da palavra
         }
         this.boxes[i] = letra;
         console.log(this.boxes[i]);
