@@ -1,20 +1,20 @@
+
+gotRight = false;// sinalizador de letra acertada
+
 class Forca {
 
-  
-  constructor(Forca){
+  constructor(Forca){ //criando objeto
    
     this.characters = Forca.split(""); //Criei um array para passar a palavra por um SPLIT para separar as letras  em caracteres
-    this.boxes = this.characters.map(letra => {return "_"});  //array para passae a palavra por um MAP para poder trocar a letra por um Underline "_"
+    this.boxes = this.characters.map(letra => {return "_"});  //array para passar a palavra por um MAP para poder trocar a letra por um Underline "_"
     this.vidas = 6;     //  vidas
     this.corrects = 0; //  acertos
-    this.chutes = "";  //  letras chutadas
+    this.letrasChutadas = "" ;//  letras chutadas
    }
-
+  
   chutar(letra) { 
-    this.chutes += letra;
-    gotRight = false;
-    anyLeft = true;
-    
+    this.letrasChutadas += letra;
+
     // criando laço para verificar se letra chutada tem na palavra 
     for(let i = 0; i < this.boxes.length; i++){
       
@@ -26,14 +26,13 @@ class Forca {
         console.log(this.boxes[i]);
         gotRight = true;   // sinalizador de acerto
       } else {
-        console.log(this.boxes[i]);
-        
+        console.log(this.boxes[i]);  
       }
     }
     if (gotRight == false) {this.vidas--};  //se o sinalizador de acerto for false entao -1 vida
   }
 
-  buscarEstado() {   // verificação de estado de jogo -  Possiveis valores: "perdeu", "aguardando chute" ou "ganhou"
+  buscarEstado() {   // verificação de estado de jogo ->  Possiveis valores: "perdeu", "aguardando chute" ou "ganhou"
     if (this.vidas == 0){
       
       return console.log("perdeu!!!");   
@@ -45,7 +44,7 @@ class Forca {
    } 
 
   buscarDadosDoJogo() {
-    console.log("Letras Chutadas: " + this.chutes);  //letras chutadas
+    console.log("Letras Chutadas: " + this.letrasChutadas);  //letras chutadas
     console.log("Vidas: " + this.vidas);  //Quantidade de vidas restantes
     console.log("Palavra: [" + this.boxes + "]");  //letras que já foram acertadas ou o valor "_" para as letras não identificadas
   }
