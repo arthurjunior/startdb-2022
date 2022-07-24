@@ -24,7 +24,7 @@ npm start
 
 As regras estão descritas [nesse arquivo](docs/Regras.md).
 
-# stacks realizadas
+## Stacks Realizadas
 
 - [x]  1 - O jogo deve iniciar com 6 vidas
 - [x]  2 - O jogo deve iniciar com o estado `aguardando chute`
