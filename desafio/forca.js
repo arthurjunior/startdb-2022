@@ -2,18 +2,23 @@
 gotRight = false;// sinalizador de letra acertada
 
 class Forca {
+  letrasChutadas = [];//  letras chutadas
+  vidas = 6; //  vidas
+  
 
   constructor(Forca){ //criando objeto
    
     this.characters = Forca.split(""); //Criei um array para passar a palavra por um SPLIT para separar as letras  em caracteres
     this.boxes = this.characters.map(letra => {return "_"});  //array para passar a palavra por um MAP para poder trocar a letra por um Underline "_"
-    this.vidas = 6;     //  vidas
     this.corrects = 0; //  acertos
-    this.letrasChutadas = "" ;//  letras chutadas
+    
    }
   
   chutar(letra) { 
-    this.letrasChutadas += letra;
+
+    if (letra.length > 1) return; //caso o chute contenha mais de uma letra nao retorna nada
+    if (this.letrasChutadas.includes(letra)) return; //caso o chute uma letra ja chutada anteriormente retorna nada
+    this.letrasChutadas += letra; // gravando letras ja chutadas
 
     // criando laço para verificar se letra chutada tem na palavra 
     for(let i = 0; i < this.boxes.length; i++){
@@ -26,7 +31,8 @@ class Forca {
         console.log(this.boxes[i]);
         gotRight = true;   // sinalizador de acerto
       } else {
-        console.log(this.boxes[i]);  
+        console.log(this.boxes[i]);
+          
       }
     }
     if (gotRight == false) {this.vidas--};  //se o sinalizador de acerto for false entao -1 vida
@@ -44,9 +50,11 @@ class Forca {
    } 
 
   buscarDadosDoJogo() {
-    console.log("Letras Chutadas: " + this.letrasChutadas);  //letras chutadas
-    console.log("Vidas: " + this.vidas);  //Quantidade de vidas restantes
-    console.log("Palavra: [" + this.boxes + "]");  //letras que já foram acertadas ou o valor "_" para as letras não identificadas
+    return {
+			LetrasChutadas: this.letrasChutadas, // Deve conter todas as letras chutadas
+			Vidas: this.vidas, // Quantidade de vidas restantes
+			Palavra: this.boxes, // Deve ser um array com as letras que já foram acertadas ou o valor "_" para as letras não identificadas
+		};
   }
 }
 
