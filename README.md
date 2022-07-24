@@ -29,7 +29,7 @@ As regras estão descritas [nesse arquivo](docs/Regras.md).
 - [x]  1 - O jogo deve iniciar com 6 vidas
 - [x]  2 - O jogo deve iniciar com o estado `aguardando chute`
 - [x]  3 - Todo chute deve conter apenas uma letra, caso tenha mais de uma a jogada deve ser ignorada, ou seja, não deve alterar nenhum estado.
-- [ ]  4 - Caso a letra chutada esteja errada mas já foi chutada anteriormente a jogada deve ser ignorada, ou seja, não deve alterar nenhum estado.
+- [x]  4 - Caso a letra chutada esteja errada mas já foi chutada anteriormente a jogada deve ser ignorada, ou seja, não deve alterar nenhum estado.
 - [x]  5 - Toda chamada ao método chutar deve registrar a letra em letrasChutadas
 - [x]  6 - Se a letra chutada não estiver contida na palavra, deve subtrair uma vida
 - [x]  7 - Se a letra chutada estiver contida na palavra, deve ser substituida na 
